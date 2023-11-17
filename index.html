@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Úsuario do window</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        
+            <div onmouseenter="passar()" onmouseout="sair()">
+                <span id="cabeca"></span>
+                    <span id="corpo"></span>
+            </div>
+            <h2 id="eu">Adriano Ramos Adr</h2>
+            <button id="btn">Iniciar sessão</button>
+        
+    </main>
+
+    <script>
+       var eu = document.querySelector('#eu')
+        function passar(){
+            document.body.style.backgroundImage = 'linear-gradient(to bottom,black,white)'
+            
+            eu.innerHTML = 'Adriano Rixas'
+            eu.style.fontStyle = 'italic'
+          
+        }
+
+        function sair(){
+            document.body.style.backgroundImage = 'linear-gradient(to bottom,blue,white)'
+            document.body.style.transition = 'backgroundImage 2s'
+            eu.innerHTML = 'Adriano Ramos Adr'
+            eu.style.fontStyle = 'normal'
+            
+        }
+    </script>
+</body>
+</html>
